@@ -19,7 +19,7 @@ const {Footer, Sider, Content } = Layout;
 export default class admin extends Component {
 
     render() {
-        
+
         const user = memoryUtils.user
         if(!user || !user._id){
             return <Redirect to='/login'/>
@@ -32,7 +32,7 @@ export default class admin extends Component {
                 </Sider>
                 <Layout>
                     <Header>Header</Header>
-                    <Content style={{backgroundColor:'#fff'}}>
+                    <Content style={{margin: 20 ,backgroundColor: 'white'}}>
                         <Switch>
                             <Route path='/home' component={home}></Route>
                             <Route path='/category' component={category}></Route>
