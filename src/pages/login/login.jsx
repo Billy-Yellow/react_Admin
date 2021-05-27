@@ -3,14 +3,11 @@ import {Redirect} from 'react-router-dom';
 import { Form, Input, Button, message} from 'antd';
 import { UserOutlined , LockOutlined } from '@ant-design/icons';
 
-
 import './login.less';
 import logo from '../../assets/images/logo.png';
 import {reqLogin} from '../../api';
 import memoryUtils from '../../utils/memoryUtils';
 import storageUtils from '../../utils/storageUtils';
-
-
 
 export default class login extends Component {
 
@@ -79,9 +76,8 @@ export default class login extends Component {
                         <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
                     </Form.Item>
                     <br />
-                    <Form.Item name="password" className="login-form-password" rules={[{
-                        validator:this.validatorPwd()
-                        }]}>
+                    <Form.Item name="password" className="login-form-password" 
+                            rules={[{validator:this.validatorPwd()}]}>
                         <Input prefix={<LockOutlined className="site-form-item-icon"/>} type="password" placeholder="Password"/>
                     </Form.Item>
                     <br />

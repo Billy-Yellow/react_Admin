@@ -20,6 +20,7 @@ export default function ajax(url, data={},type='GET'){
         }).catch(error=>{
             message.error('requset error: '+error.message)
         })
+        
     })
     
 }
